@@ -1,7 +1,7 @@
 "use client";
-import { stringify } from "postcss";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import Header from "../components/Header";
 
 export default function About() {
   const {
@@ -28,7 +28,7 @@ export default function About() {
 
   return (
     <>
-      <h1>Profile</h1>
+      <Header title="Profile" />
       <section>
         <img src="https://placehold.co/400" />
         <p>

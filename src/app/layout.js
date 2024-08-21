@@ -7,13 +7,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <header style={{ backgroundColor: "lightblue" }}>
+        <header style={{ backgroundColor: "lightblue", display: "flex", justifyContent: "space-evenly" }}>
           <a href="/about">Profile</a>
-          <br />
-          <a href="/pictures">API Page</a>
+          <a href="/pictures">Pictures</a>
         </header>
         {children}
-
         <footer>
           <p>Footer</p>
         </footer>
