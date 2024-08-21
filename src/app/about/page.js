@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import Image from "next/image";
 import Header from "../components/Header";
 
 export default function About() {
@@ -30,7 +31,7 @@ export default function About() {
     <>
       <Header title="Profile" />
       <section>
-        <img src="https://placehold.co/400" />
+        <Image src={'/avatar.png'} width={400} height={400} alt="Picture of Robert"/>
         <p>
           <label>Name: </label>
           <span>Robert Davis</span>
