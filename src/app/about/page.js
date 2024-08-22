@@ -30,22 +30,29 @@ export default function About() {
   return (
     <>
       <Header title="Profile" />
-      <section>
-        <Image src={'/avatar.png'} width={400} height={400} alt="Picture of Robert"/>
-        <p>
-          <label>Name: </label>
-          <span>Robert Davis</span>
-        </p>
-        <p>
-          <label>Education: </label>
-          <span>Per Scholas Alumni</span>
-        </p>
-        <p>Career At CGI: 3 Months</p>
-        <label>Interest and Hobbies</label>
-        <p>
-          Writing. I've authored a few short stories here and there but I like
-          writing fantasy in general
-        </p>
+      <section style={{display: "flex", justifyContent: "flex-start", gap: 20}}>
+        <Image
+          src={"/avatar.png"}
+          width={400}
+          height={400}
+          alt="Picture of Robert"
+        />
+        <div>
+          <p>
+            <label>Name: </label>
+            <span>Robert Davis</span>
+          </p>
+          <p>
+            <label>Education: </label>
+            <span>Per Scholas Alumni</span>
+          </p>
+          <p>Career At CGI: 3 Months</p>
+          <label>Interest and Hobbies</label>
+          <p>
+            Writing. I've authored a few short stories here and there but I like
+            writing fantasy in general
+          </p>
+        </div>
       </section>
 
       <section>
@@ -91,7 +98,14 @@ export default function About() {
           <input
             type="button"
             value={"Reset"}
-            onClick={() => reset({ name: "name", email: "email", message: "", messageSent: setConfirmMessage("")})}
+            onClick={() =>
+              reset({
+                name: "name",
+                email: "email",
+                message: "",
+                messageSent: setConfirmMessage(""),
+              })
+            }
           />
           <p {...register("messageSent")}>{confirmationMessage}</p>
         </form>
